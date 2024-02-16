@@ -29,7 +29,7 @@ const PostDetails = () => {
                 { post && (
                     <Grid item xs={11} sm={9} md={7} lg={5}>
                         <Box sx={{ boxShadow: 3, overflow: "hidden", position: "relative", width: "100%", paddingBottom: "56.25%" }}>
-                            <img src={post.thumbnailURL} width="100%" style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}/>
+                            <img src={post.thumbnailURL} alt={post.title} width="100%" style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}/>
                         </Box>
                         <Box paddingY={2}>
                             <Typography variant="h3" color={theme.palette.primary.light} fontWeight="bold" fontFamily="Montserrat">{post.title}</Typography>
