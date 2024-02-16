@@ -132,6 +132,11 @@ const Blog = () => {
                         {selectedTags.length > 0 && !filteredData && (
                             <Typography variant="h5">No posts match the selected tags!</Typography>
                         )}
+                        {data && Object.keys(data).length === 0 && (
+                            <Typography variant="h4" color="textSecondary" align="center">
+                                More content coming soon
+                            </Typography>
+                        )}
                     </Stack>
                 </Grid>
             </Grid>

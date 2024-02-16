@@ -9,6 +9,7 @@ import "./App.css";
 import {NavProvider} from "./contexts/NavContext";
 import {BlogProvider} from "./contexts/BlogContext";
 import {ProjectsProvider} from "./contexts/ProjectsContext";
+import {ScrollToTopOnMount} from "./components/ScrollToTopOnMount";
 
 // Lets run a test
 function App() {
@@ -20,6 +21,7 @@ function App() {
                     <ThemeProvider theme={theme}>
                         <NavProvider>
                             <AnimatePresence>
+                                <ScrollToTopOnMount />
                                 <Routes />
                             </AnimatePresence>
                         </NavProvider>

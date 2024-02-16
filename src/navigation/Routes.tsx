@@ -28,7 +28,7 @@ const createRoute = (title: string, path: string, element: ReactNode, icon?: Rea
 });
 
 const publicRoutes = [
-    createRoute("Login", "/login", <Login />, <LoginIcon />),
+    createRoute("Login", "/login", <Login />),
 ];
 const privateRoutes = [
     createRoute("Create Project", "/create-project", <ProjectForm />),
