@@ -1,5 +1,5 @@
-import {useNavigate, useParams} from "react-router-dom";
-import {Box, Button, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
+import {useParams} from "react-router-dom";
+import {Box, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
 import {useBlog} from "../../contexts/BlogContext";
 import remarkMath from "remark-math";
 import remarkGfm from "remark-gfm";
@@ -20,6 +20,7 @@ const PostDetails = () => {
         if (data && postId) {
             setPost(data[postId]);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);
 
 

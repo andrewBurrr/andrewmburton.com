@@ -1,11 +1,8 @@
-import React, {FC, useEffect} from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import {Box, Container, Fade, SvgIcon, Typography, useTheme} from "@mui/material";
+import React, {FC} from 'react';
+import { motion } from 'framer-motion';
+import {Box, useTheme} from "@mui/material";
 // @ts-ignore
 import SVG from "assets/waveanimation.svg";
-import {theme} from "../../styles/AppTheme";
-import {Link} from "@mui/material";
-import {ExpandMoreRounded} from "@mui/icons-material";
 import {ScrollTo} from "../../components/ScrollTo";
 
 interface WaveAnimationProps {
@@ -13,7 +10,7 @@ interface WaveAnimationProps {
 }
 
 const WaveAnimation: FC<WaveAnimationProps> = ({ nextSection }) => {
-    // const theme = useTheme();
+    const theme = useTheme();
     const animationVariants = {
         initial: {
             transform: 'translateX(0%)',

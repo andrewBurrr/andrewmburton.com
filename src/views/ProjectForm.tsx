@@ -12,7 +12,7 @@ import {useNavigate} from "react-router-dom";
 
 const ProjectForm = () => {
     const navigate = useNavigate();
-    const { publishProject, loading, error } = useCreateProject();
+    const { publishProject } = useCreateProject();
     const [projectData, setProjectData] = useState<Project>({
         title: '',
         thumbnailURL: '',

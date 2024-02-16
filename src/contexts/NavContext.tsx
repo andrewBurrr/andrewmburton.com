@@ -1,4 +1,4 @@
-import React, {createContext, FC, ReactNode, useContext, useState} from "react";
+import React, {createContext, FC, ReactNode, useContext} from "react";
 import {useCycle} from "framer-motion";
 import {useAuth} from "./AuthContext";
 import {globalRoutes, privateRoutes, publicRoutes} from "../navigation/Routes";

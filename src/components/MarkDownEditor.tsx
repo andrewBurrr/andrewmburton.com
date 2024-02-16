@@ -177,6 +177,7 @@ const MarkDownEditor: React.FC<MarkDownEditorProps> = ({ content, onChange}) => 
         return () => {
             window.removeEventListener('resize', calculateButtons);
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [hiddenButtons, visibleButtons]);
 
     const handleChange = (event: React.SyntheticEvent, newTab: number) => {
