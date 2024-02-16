@@ -1,15 +1,12 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from "contexts/AuthContext";
-// import { authOnlyRoutes, publicRoutes, unauthOnlyRoutes } from "navigation/RouteConfig";
-
-import { GitHub, LinkedIn, Twitter, YouTube } from "@mui/icons-material";
+import { GitHub, LinkedIn, YouTube } from "@mui/icons-material";
 import {FooterBox} from "components/footer/FooterBox";
 import {LinkBox} from "components/footer/LinkBox";
 import {FooterLink} from "components/footer/FooterLink";
 import {SocialBox} from "components/footer/SocialBox";
 import {globalRoutes, privateRoutes, publicRoutes} from "../../navigation/Routes";
-import {Divider} from "@mui/material";
 
 
 const Footer = () => {

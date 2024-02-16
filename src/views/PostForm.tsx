@@ -1,7 +1,6 @@
 import React, {FormEvent, useState} from 'react';
 
 import {Post, Project} from "types/api";
-import {useCreateProject} from "hooks/useCreateProject";
 import {FormTextField} from "components/forms/FormTextField";
 import {Box, Grid, Stack, Typography} from "@mui/material";
 import {FormButton} from "components/forms/FormButton";
@@ -11,7 +10,7 @@ import {FileUpload} from "../components/forms/FileUpload";
 import {useCreatePost} from "../hooks/useCreatePost";
 
 const PostForm = () => {
-    const { publishPost, loading, error } = useCreatePost();
+    const { publishPost } = useCreatePost();
     const [postData, setPostData] = useState<Post>({
         title: '',
         thumbnailURL: '',

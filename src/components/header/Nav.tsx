@@ -2,7 +2,6 @@ import React from "react";
 import {Backdrop, Fade, useTheme} from "@mui/material";
 import {MenuControl} from "./MenuControl";
 import {useNav} from "../../contexts/NavContext";
-import {motion} from "framer-motion";
 
 const Nav = () => {
     const theme = useTheme();

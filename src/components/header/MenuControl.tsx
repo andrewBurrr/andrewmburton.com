@@ -1,20 +1,19 @@
-import {FC, SyntheticEvent, useEffect, useState} from "react";
-import {Stack, Tab, Tabs, Typography, useTheme} from "@mui/material";
-import {Link as RouteLink, useLocation} from "react-router-dom";
+import {FC} from "react";
+import {Stack, Typography, useTheme} from "@mui/material";
+import {Link as RouteLink} from "react-router-dom";
 import {Link as StyleLink} from "@mui/material";
 import {CustomRoute} from "../../types/config";
-import {MenuItem} from "./MenuItem";
 import {motion} from "framer-motion";
 import {useNav} from "../../contexts/NavContext";
 
-const tabsVariants = {
-    open: {
-        transition: { staggerChildren: 0.07, delayChildren: 0.2 }
-    },
-    closed: {
-        transition: { staggerChildren: 0.05, staggerDirection: -1 }
-    }
-};
+// const tabsVariants = {
+//     open: {
+//         transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+//     },
+//     closed: {
+//         transition: { staggerChildren: 0.05, staggerDirection: -1 }
+//     }
+// };
 
 const tabVariants = {
     open: {
@@ -39,19 +38,19 @@ interface MenuControlProps {
 
 const MenuControl: FC<MenuControlProps> = ({ links}) => {
     const theme = useTheme();
-    const location = useLocation();
+    // const location = useLocation();
     const { toggleIsOpen } = useNav();
-    const pathIndex = () => links.findIndex(link => link.path === location.pathname);
-    const [currentPage, setCurrentPage] = useState(pathIndex);
-
-    const handlePageChange = ( event: SyntheticEvent ) => {
-        toggleIsOpen();
-        setCurrentPage(pathIndex);
-    };
-
-    useEffect(() => {
-        setCurrentPage(pathIndex);
-    }, [location]);
+    // const pathIndex = () => links.findIndex(link => link.path === location.pathname);
+    // const [currentPage, setCurrentPage] = useState(pathIndex);
+    //
+    // const handlePageChange = ( event: SyntheticEvent ) => {
+    //     toggleIsOpen();
+    //     setCurrentPage(pathIndex);
+    // };
+    //
+    // useEffect(() => {
+    //     setCurrentPage(pathIndex);
+    // }, [location]);
 
     return (
         <Stack direction="column" alignItems="stretch" justifyContent="space-between" sx={{ height: "90%", py: 6 }}>

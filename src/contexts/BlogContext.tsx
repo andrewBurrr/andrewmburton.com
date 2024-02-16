@@ -35,6 +35,7 @@ const BlogProvider: FC<BlogProviderProps> = ({ children }) => {
         return () => {
             unsubscribe();
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (

@@ -1,5 +1,5 @@
 import {useParams} from "react-router-dom";
-import {Box, Button, Divider, Grid, IconButton, Stack, Typography, useTheme} from "@mui/material";
+import {Box, Divider, Grid, IconButton, Stack, Typography, useTheme} from "@mui/material";
 import {useProjects} from "../../contexts/ProjectsContext";
 import React, {useEffect, useState} from "react";
 import {Project} from "../../types/api";
@@ -21,6 +21,7 @@ const ProjectDetails = () => {
         if (data && projectId) {
             setProject(data[projectId]);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);
 
 

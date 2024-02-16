@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import {Link, useNavigate} from 'react-router-dom';
+import React from 'react';
+import {Link} from 'react-router-dom';
 import { useAuth } from "contexts/AuthContext";
-import { auth } from "apis/firebase";
 import {
     AppBar, Box, Container, Grid,
     IconButton, styled, Toolbar, useTheme,
 } from "@mui/material";
-import { useFetchCurrentUser } from "hooks/useFetchCurrentUser";
 import {globalRoutes, privateRoutes, publicRoutes} from "../../navigation/Routes";
 import {TabControl} from "./TabControl";
 import {Nav} from "./Nav";
@@ -37,18 +35,18 @@ const MediumBox = styled(Box) `
   }
 `
 
-const LinkContainer = styled('div') `
-  display: flex;
-  align-items: center;
-`
+// const LinkContainer = styled('div') `
+//   display: flex;
+//   align-items: center;
+// `
 
 const Header: React.FC = () => {
     const theme = useTheme();
     const { user, loading } = useAuth();
     const { isOpen, toggleIsOpen } = useNav();
-    const navigate = useNavigate();
-    const [anchorElUser, setAnchorElUser] = useState<null|HTMLElement>(null);
-    const { userData } = useFetchCurrentUser(user?.uid || null);
+    // const navigate = useNavigate();
+    // const [anchorElUser, setAnchorElUser] = useState<null|HTMLElement>(null);
+    // const { userData } = useFetchCurrentUser(user?.uid || null);
 
 
     const links = !loading ? [
@@ -56,18 +54,18 @@ const Header: React.FC = () => {
         ...(user !== null ? privateRoutes : publicRoutes),
     ] : [];
 
-    const handleUserMenuClick = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElUser(event.currentTarget);
-    }
-
-    const handleClose = () => {
-        setAnchorElUser(null);
-    }
-
-    const handleLogout = async () => {
-        await auth.signOut();
-        navigate("/");
-    }
+    // const handleUserMenuClick = (event: React.MouseEvent<HTMLElement>) => {
+    //     setAnchorElUser(event.currentTarget);
+    // }
+    //
+    // const handleClose = () => {
+    //     setAnchorElUser(null);
+    // }
+    //
+    // const handleLogout = async () => {
+    //     await auth.signOut();
+    //     navigate("/");
+    // }
 
     return (
         <React.Fragment>
