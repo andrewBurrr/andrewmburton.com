@@ -1,5 +1,5 @@
 import {useParams} from "react-router-dom";
-import {Box, Button, Divider, Grid, IconButton, Stack, Typography, useTheme} from "@mui/material";
+import {Box, Divider, Grid, IconButton, Stack, Typography, useTheme} from "@mui/material";
 import {useProjects} from "../../contexts/ProjectsContext";
 import React, {useEffect, useState} from "react";
 import {Project} from "../../types/api";
@@ -21,6 +21,7 @@ const ProjectDetails = () => {
         if (data && projectId) {
             setProject(data[projectId]);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);
 
 
@@ -30,7 +31,7 @@ const ProjectDetails = () => {
                 { project && (
                     <Grid item xs={11} sm={9} md={7} lg={5}>
                         <Box sx={{ boxShadow: 3, overflow: "hidden", position: "relative", width: "100%", paddingBottom: "56.25%" }}>
-                            <img src={project.thumbnailURL} width="100%" style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}/>
+                            <img src={project.thumbnailURL} alt={project.title} width="100%" style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}/>
                         </Box>
                         <Box paddingTop={2}>
                             <Typography variant="h3" color={theme.palette.primary.light} fontWeight="bold" fontFamily="Montserrat">{project.title}</Typography>

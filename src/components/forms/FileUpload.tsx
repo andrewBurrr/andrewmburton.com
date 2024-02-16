@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Grid, Paper, Chip, styled, useTheme, useMediaQuery, Box} from "@mui/material";
+import {Grid, Paper, Chip, styled, useTheme, useMediaQuery} from "@mui/material";
 import {FormButton} from "./FormButton";
 import {CloudUpload} from "@mui/icons-material";
 import {Project} from "../../types/api";

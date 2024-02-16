@@ -8,7 +8,6 @@ import {
     Home as HomeIcon,
     Login as LoginIcon,
     PrecisionManufacturing,
-    Abc, Info
 } from "@mui/icons-material";
 import {PrivateRoute} from "./PrivateRoute";
 import {PublicRoute} from "./PublicRoute";
@@ -17,7 +16,6 @@ import {Login} from "../views/Login";
 import {TransitionWrapper} from "../components/TransitionWrapper";
 import {Blog} from "../views/blog/Blog";
 import {PostForm} from "../views/PostForm";
-import {About} from "../views/about/About";
 import {AppLayout} from "../layouts/AppLayout";
 import { ProjectDetails } from "views/projects/ProjectDetails";
 import { PostDetails } from "views/blog/PostDetails";

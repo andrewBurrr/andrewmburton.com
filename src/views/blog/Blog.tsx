@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { Link as RouterLink } from "react-router-dom";
-import {Avatar, Box, Button, Chip, Container, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
+import {Avatar, Box, Button, Chip, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
 import {CreateFAB} from "../../components/CreateFAB";
 import {useBlog} from "../../contexts/BlogContext";
 import {Post} from "../../types/api";

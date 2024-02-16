@@ -1,5 +1,5 @@
-import {useNavigate, useParams} from "react-router-dom";
-import {Box, Button, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
+import {useParams} from "react-router-dom";
+import {Box, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
 import {useBlog} from "../../contexts/BlogContext";
 import remarkMath from "remark-math";
 import remarkGfm from "remark-gfm";
@@ -20,6 +20,7 @@ const PostDetails = () => {
         if (data && postId) {
             setPost(data[postId]);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);
 
 
@@ -29,7 +30,7 @@ const PostDetails = () => {
                 { post && (
                     <Grid item xs={11} sm={9} md={7} lg={5}>
                         <Box sx={{ boxShadow: 3, overflow: "hidden", position: "relative", width: "100%", paddingBottom: "56.25%" }}>
-                            <img src={post.thumbnailURL} width="100%" style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}/>
+                            <img src={post.thumbnailURL} alt={post.title} width="100%" style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}/>
                         </Box>
                         <Box paddingY={2}>
                             <Typography variant="h3" color={theme.palette.primary.light} fontWeight="bold" fontFamily="Montserrat">{post.title}</Typography>

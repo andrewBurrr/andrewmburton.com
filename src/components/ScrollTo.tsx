@@ -1,5 +1,5 @@
 import {theme} from "../styles/AppTheme";
-import {Box, Link, Typography} from "@mui/material";
+import {Link, Typography} from "@mui/material";
 import {motion} from "framer-motion";
 import {ExpandMoreRounded} from "@mui/icons-material";
 import React, {FC} from "react";

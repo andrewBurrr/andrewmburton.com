@@ -18,6 +18,7 @@ const TabControl: FC<PageControlProps> = ({ links }) => {
 
     useEffect(() => {
         setCurrentPage(pathIndex() > -1 ? pathIndex : 0);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location]);
 
     return (

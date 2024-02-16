@@ -1,14 +1,9 @@
-import React, {FC, ReactNode, useState} from 'react';
+import React, {FC, ReactNode} from 'react';
 import { Header } from 'components/header/Header';
 import { Footer } from 'components/footer/Footer';
-import { theme } from 'styles/AppTheme';
-import { CssBaseline, ThemeProvider } from "@mui/material";
 import Box from "@mui/material/Box";
-import { Outlet } from "react-router-dom";
 import {useAuth} from "../contexts/AuthContext";
-import {TransitionWrapper} from "../components/TransitionWrapper";
-import {NavProvider, useNav} from "../contexts/NavContext";
-import {GenericLoader} from "../components/GenericLoader";
+import {useNav} from "../contexts/NavContext";
 
 interface AppLayoutProps {
     children: ReactNode;

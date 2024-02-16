@@ -1,7 +1,5 @@
 import {useState} from "react";
-import {getDownloadURL, ref, uploadBytes} from "firebase/storage";
-import {storage} from "../apis/firebase";
-import {Lead, Post} from "../types/api";
+import {Lead} from "../types/api";
 import {addDoc, collection, getFirestore} from "firebase/firestore";
 
 const useCreateLead = () => {

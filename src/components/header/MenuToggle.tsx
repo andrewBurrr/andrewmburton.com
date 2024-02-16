@@ -1,5 +1,5 @@
-import React, {FC, SVGProps, useEffect, useState} from "react";
-import {motion, SVGMotionProps} from "framer-motion";
+import React from "react";
+import {motion} from "framer-motion";
 import {styled, SvgIcon, useTheme} from "@mui/material";
 import {useNav} from "../../contexts/NavContext";
 

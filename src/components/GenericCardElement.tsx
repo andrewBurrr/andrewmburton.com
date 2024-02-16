@@ -1,6 +1,6 @@
 import {CardElement} from "../types/api";
-import {Box, Grid, Paper, styled, Typography, useTheme} from "@mui/material";
-import React, {useEffect, useRef, useState} from "react";
+import { Grid, Paper, styled, Typography, useTheme} from "@mui/material";
+import React, { useState} from "react";
 import {Link} from "react-router-dom";
 import { motion } from "framer-motion";
 

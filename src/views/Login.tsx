@@ -1,5 +1,5 @@
-import React, {ChangeEvent, useEffect, useState} from "react";
-import {Link as RouterLink, useNavigate} from 'react-router-dom';
+import React, {ChangeEvent, useState} from "react";
+import {Link as RouterLink} from 'react-router-dom';
 import { FormGridContainer } from "components/forms/FormGridContainer";
 import { FormGrid } from "components/forms/FormGrid";
 import { FormTextField } from "components/forms/FormTextField";
@@ -8,7 +8,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import {Paper, Grid, Box, Link, Avatar, Typography, Stack} from "@mui/material";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "apis/firebase";
-import {useAuth} from "../contexts/AuthContext";
+
 const Login = () => {
     // const user = useAuth();
     // const navigate = useNavigate();
