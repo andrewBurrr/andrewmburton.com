@@ -48,7 +48,7 @@ const Login = () => {
     }
 
     return (
-        <FormGridContainer container>
+        <FormGridContainer container height={`calc(100vh - 91px)`}>
             <FormGrid item xs={12} sm={8} md={5} component={Paper} square variant="outlined">
                 <Box component="form" onSubmit={handleSubmit} noValidate width="100%">
                 <Stack spacing={2} alignItems="center">

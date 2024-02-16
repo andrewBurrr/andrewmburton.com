@@ -21,7 +21,7 @@ const FeaturedProjects: FC<FeaturedProjectsProps> = ({ nextSection }) => {
             </Typography>
             <Grid container justifyContent="center" alignItems="center" sx={{ display: "flex", flex: "1 1 auto", flexDirection: "column", width: "100%" }}>
                 <Grid item width="100%">
-                    { data &&
+                    { data && Object.keys(data).length !== 0 &&
                         <Carousel animation="slide" duration={1000} height="75vh">
                             { Object.entries(data).map( ([id, data]) =>
                                 <Grid key={id} container alignItems="center" justifyContent="center" height="100%">
@@ -32,6 +32,11 @@ const FeaturedProjects: FC<FeaturedProjectsProps> = ({ nextSection }) => {
                             ) }
                         </Carousel>
                     }
+                    {data && Object.keys(data).length === 0 && (
+                        <Typography variant="h4" color={theme.palette.getContrastText(theme.palette.primary.main)} align="center">
+                            More content coming soon
+                        </Typography>
+                    )}
                 </Grid>
             </Grid>
             <Box sx={{ width: "100%", position: "absolute", bottom: 0, alignItems: 'center', }}>

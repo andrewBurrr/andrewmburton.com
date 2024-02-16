@@ -18,6 +18,13 @@ const Projects = () => {
                             <GenericCardElement data={project} route={`/projects/${id}`} />
                         </Grid>
                     ))}
+                    {data && Object.keys(data).length === 0 && (
+                        <Grid item xs={12}>
+                            <Typography variant="h4" color="textSecondary" align="center">
+                                More content coming soon
+                            </Typography>
+                        </Grid>
+                    )}
                 </Grid>
             </Container>
             <CreateFAB route="/create-project" />
