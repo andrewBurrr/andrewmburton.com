@@ -9,6 +9,8 @@ import "./App.css";
 import {NavProvider} from "./contexts/NavContext";
 import {BlogProvider} from "./contexts/BlogContext";
 import {ProjectsProvider} from "./contexts/ProjectsContext";
+
+// Lets run a test
 function App() {
     return (
         <AuthProvider>
